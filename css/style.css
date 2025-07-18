@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.9fr 3fr 1fr;
+    grid-template-rows: 0.1fr 0.18fr 1fr;
+    gap: 6px;
+}
+
+  
+.container div {
+    padding: 0.1rem;
+    font-size: 2rem;
+    /* font-family: Helvetica;
+    font-weight: bold; */
+    color: white;
+    border: 1px solid black;
+}
+
+/* minimize all children elements for now to retain grid properties */
+/* .container > * {
+    min-height: 0;
+    overflow: hidden;
+} */
+
+.header {
+    background-color: #dfe0eb;
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+}
+
+.nav {
+    background-color: #248AFB; 
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+}
+
+.sidebar {
+    background-color: #F5A623;
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+
+.projects {
+    background-color: #F6F7F8;   
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.updates {
+    background-color: #D6D9DC;
+    grid-column: 3;
+    grid-row: 3 / -1;
+}
