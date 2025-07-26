@@ -1,58 +1,337 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'main font';
+}
+
+@font-face {
+    font-family: 'main font';
+    src: url("/fonts/Inter/static/Inter_24pt-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'bold font';
+    src: url("/fonts/Inter/static/Inter_18pt-Medium.ttf");
 }
 
 .container {
+    background-color: white;
     height: 100vh;
     display: grid;
     grid-template-columns: 0.9fr 3fr 1fr;
-    grid-template-rows: 0.1fr 0.18fr 1fr;
-    gap: 6px;
+    grid-template-rows: 0.1fr 0.1fr 1fr;
 }
 
-  
-.container div {
-    padding: 0.1rem;
-    font-size: 2rem;
-    /* font-family: Helvetica;
-    font-weight: bold; */
-    color: white;
-    border: 1px solid black;
+svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 8px;
 }
-
-/* minimize all children elements for now to retain grid properties */
-/* .container > * {
-    min-height: 0;
-    overflow: hidden;
-} */
 
 .header {
-    background-color: #dfe0eb;
+    background-color: white;
+    padding: 1rem;
+
     grid-column: 2 / -1;
     grid-row: 1 / 2;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .search-area, 
+.header .profile-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header .search-bar {
+    width: 35vw;
+    height: 1rem;
+    background-color: #e5e5e5;
+    padding: 1rem;
+    border-radius: 24px;
+    border: none;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    color: rgb(106, 106, 106);
+    font-size: 1rem;
+}
+
+.header .search-bar:focus {
+    outline: none;
+}
+
+.header #naruto-small {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.header svg:hover,
+.header #naruto-small:hover {
+    cursor: pointer;
 }
 
 .nav {
-    background-color: #248AFB; 
+    background-color: white;
+    padding: 0 2rem 1rem 2rem;
+    margin-right: 0.5rem;
+
     grid-column: 2 / -1;
     grid-row: 2 / 3;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .greeting-container {
+    grid-column: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.nav .greeting {
+    margin-left: 3px; 
+}
+
+.nav .name {
+    font-family: 'bold font';
+    font-size: 2rem;
+    font-weight: 550;
+}
+
+.nav #naruto-big {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.nav .buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav button {
+    background-color: #248AFB;
+    padding: 0.5rem 1.9rem;
+    border-radius: 24px;
+    border-style: none;
+
+    color: white;
+    font-family: 'bold font';
+    font-size: 1rem;
+    font-weight: 550;
+}
+
+.nav button:hover {
+    cursor: pointer;
+    background-color: #2280ec;
+    transition: 0.2s ease;
+    transform: scale(1.02);
 }
 
 .sidebar {
     background-color: #F5A623;
     grid-column: 1;
     grid-row: 1 / -1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    color: white;
+    font-family: 'bold font';
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.sidebar h1 {
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .item {
+    padding: 0.8rem 0.8rem 0.8rem 2rem;
+    cursor: pointer;
+    list-style-type: none;
+    opacity: 0.8;
+}
+
+.sidebar .item:hover {
+    background-color: #ed9a15;
+    color: rgb(250, 250, 250);
+    opacity: 1;
+}
+
+.sidebar .link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sidebar svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 1px;
+}
+
+.sidebar span {
+    font-size: 1.2rem;
 }
 
 .projects {
-    background-color: #F6F7F8;   
+    background-color: #f0f0f0;
     grid-column: 2;
     grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.projects h2 {
+    padding: 1rem 1rem 0 1rem;
+    font-size: 1.15rem;
+    font-family: 'bold font';
+}
+
+.projects .cards-container {
+    padding: 1rem;
+    overflow-y: scroll;
+
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.projects .project-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: #D6D9DC 1px 3px 8px;
+    transition: 0.25s ease-out;
+}
+
+.projects .project-card:hover {
+    transform: scale(1.02);
+    transition: 0.25s ease-out;
+    box-shadow: 1px 3px 8px rgb(169, 169, 169);
+}
+
+.projects .card-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem 1.25rem 0rem 1.25rem;
+}
+
+.projects .card-title {
+    font-size: 1.15rem;
+    font-family: 'bold font';
+    font-weight: 550;
+}
+
+.projects .project-link {
+    text-decoration: none;
+    font-family: 'main font';
+    color: #0f73e7;
+}
+
+.projects .project-link:hover {
+    color: #2280ec;
+    font-weight: 900;
+}
+
+.projects .img-wrapper {
+    height: 300px;          
+    overflow: hidden;
+}
+
+.projects img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 12px 12px;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .updates {
-    background-color: #D6D9DC;
+    background-color: #f0f0f0;
+    padding-left: 0.5rem;
+
     grid-column: 3;
     grid-row: 3 / -1;
+
+    text-align: left;
+}
+
+.updates h2 {
+    padding: 1rem 1rem 0.4rem 0rem;
+    font-size: 1.15rem;
+    font-family: 'bold font';
+}
+
+.updates .section {
+    width: 250px;
+    height: auto;
+    background-color: white;
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: #D6D9DC 3px 3px 8px;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+} 
+
+.updates h4 {
+    font-size: 0.9rem;
+    font-family: 'bold font';
+    font-weight: 900;
+}
+
+.updates p {
+    color: #808080;
+    font-size: 0.7rem;
+    line-height: 1rem;
+}
+
+
+.updates .section .announcements-row {
+    width: 100%;
+}
+
+.updates .announcements-row:not(:last-child) p {
+    border-bottom: 1px solid #cbcaca;
+    padding-bottom: 1rem;
+}
+
+.updates .trending-row {
+    display: flex;
+    gap: 12px;
+}
+
+.updates .trending-row:hover,
+.updates .announcements-row:hover  {
+    cursor: pointer;
+}
+
+.updates .trending-row img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
 }

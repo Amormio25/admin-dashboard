@@ -11,163 +11,196 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="pfp small"></div>
-            <div class="notif-icon"></div>
-            <div class="search-bar"></div>
+            <div class="search-area">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+                <input type="text" placeholder="Search..." class="search-bar">
+            </div>
+            <div class="profile-area">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 17V11.8C18.5 11.9 18 12 17.5 12H17V18H7V11C7 8.2 9.2 6 12 6C12.1 4.7 12.7 3.6 13.5 2.7C13.2 2.3 12.6 2 12 2C10.9 2 10 2.9 10 4V4.3C7 5.2 5 7.9 5 11V17L3 19V20H21V19L19 17M10 21C10 22.1 10.9 23 12 23S14 22.1 14 21H10M21 6.5C21 8.4 19.4 10 17.5 10S14 8.4 14 6.5 15.6 3 17.5 3 21 4.6 21 6.5" /></svg>
+                <img id="naruto-small" src="./imgs/pngs/naruto.png" alt="profile picture" width="100" height="90">
+            </div>
         </div>
         <div class="nav">
-            <div class="pfp big"></div>
-            <div class="greeting-box">
-                <div class="greeting"></div>
-                <div class="name"></div>
+            <div class="greeting-container">
+                <img id="naruto-big" src="./imgs/pngs/naruto.png" alt="profile picture" width="100" height="90">
+                <div>
+                    <h3 class="greeting">Hi there,</h3>
+                    <h1 class="name">Amormio Velasquez (@amormio)</h1>
+                </div>
             </div>
-            <button class="new"></button>
-            <button class="upload"></button>
-            <button class="share"></button>
+            <div class="buttons">
+                <button class="new">New</button>
+                <button class="upload">Upload</button>
+                <button class="share">Share</button>
+            </div>
         </div>
         <div class="sidebar">
-            <div class="logo"></div>
+            <h1>Dashboard</h1>
             <ul>
-                <li class="nav-item">
-                    <a class="nav-link">
-                        <img src="" alt="">
-                        <span></span>
+                <li class="item">
+                    <a class="link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" /></svg>
+                        <span>Home</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link">
-                        <img src="" alt="">
-                        <span></span>
+                <li class="item">
+                    <a class="link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" /></svg>
+                        <span>Profile</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link">
-                        <img src="" alt="">
-                        <span></span>
+                <li class="item">
+                    <a class="link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>
+                        <span>Messages</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link">
-                        <img src="" alt="">
-                        <span></span>
+                <li class="item">
+                    <a class="link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>
+                        <span>History</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link">
-                        <img src="" alt="">
-                        <span></span>
+                <li class="item">
+                    <a class="link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M15,7H20.5L15,1.5V7M8,0H16L22,6V18A2,2 0 0,1 20,20H8C6.89,20 6,19.1 6,18V2A2,2 0 0,1 8,0M4,4V22H20V24H4A2,2 0 0,1 2,22V4H4Z" /></svg>
+                        <span>Tasks</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link">
-                        <img src="" alt="">
-                        <span></span>
+                <li class="item">
+                    <a class="link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" /></svg>
+                        <span>Communities</span>
                     </a>
                 </li>
             </ul>
             <ul>
-                <li class="nav-item">
-                    <a class="nav-link">
-                        <img src="" alt="">
-                        <span></span>
+                <li class="item">
+                    <a class="link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" /></svg>
+                        <span>Settings</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link">
-                        <img src="" alt="">
-                        <span></span>
+                <li class="item">
+                    <a class="link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2M12.19,5.5C11.3,5.5 10.59,5.68 10.05,6.04C9.5,6.4 9.22,7 9.27,7.69H11.24C11.24,7.41 11.34,7.2 11.5,7.06C11.7,6.92 11.92,6.85 12.19,6.85C12.5,6.85 12.77,6.93 12.95,7.11C13.13,7.28 13.22,7.5 13.22,7.8C13.22,8.08 13.14,8.33 13,8.54C12.83,8.76 12.62,8.94 12.36,9.08C11.84,9.4 11.5,9.68 11.29,9.92C11.1,10.16 11,10.5 11,11H13C13,10.72 13.05,10.5 13.14,10.32C13.23,10.15 13.4,10 13.66,9.85C14.12,9.64 14.5,9.36 14.79,9C15.08,8.63 15.23,8.24 15.23,7.8C15.23,7.1 14.96,6.54 14.42,6.12C13.88,5.71 13.13,5.5 12.19,5.5M11,12V14H13V12H11Z" /></svg>
+                        <span>Support</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link">
-                        <img src="" alt="">
-                        <span></span>
+                <li class="item">
+                    <a class="link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M12,12H19C18.47,16.11 15.72,19.78 12,20.92V12H5V6.3L12,3.19M12,1L3,5V11C3,16.55 6.84,21.73 12,23C17.16,21.73 21,16.55 21,11V5L12,1Z" /></svg>
+                        <span>Privacy</span>
                     </a>
                 </li>
             </ul>
         </div>
         <div class="projects">
-            <h2 class="desc"></h2>
-            <div class="project-card">
-                <h3 class="project-title"></h3>
-                <p class="project-desc"></p>
-                <button class="project-btns"></button>
-            </div>
-            <div class="project-card">
-                <h3 class="project-title"></h3>
-                <p class="project-desc"></p>
-                <button class="project-btns"></button>
-            </div>
-            <div class="project-card">
-                <h3 class="project-title"></h3>
-                <p class="project-desc"></p>
-                <button class="project-btns"></button>
-            </div>
-            <div class="project-card">
-                <h3 class="project-title"></h3>
-                <p class="project-desc"></p>
-                <button class="project-btns"></button>
-            </div>
-            <div class="project-card">
-                <h3 class="project-title"></h3>
-                <p class="project-desc"></p>
-                <button class="project-btns"></button>
-            </div>
-            <div class="project-card">
-                <h3 class="project-title"></h3>
-                <p class="project-desc"></p>
-                <button class="project-btns"></button>
+            <h2 class="desc">Your Projects</h2>
+            <div class="cards-container">
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Calculator</h3>
+                        <a class="project-link" href="https://amormio25.github.io/Calculator/" target="_blank" noopener noreferrer>View Demo</a>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="./imgs/pngs/calculator.png" alt="calculator">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Sign-Up Form</h3>
+                        <a class="project-link" href="https://amormio25.github.io/sign-up-form/" target="_blank" noopener noreferrer>View Demo</a>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="./imgs/pngs/sign-up.png" alt="sign-up form">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Etch-A-Sketch</h3>
+                        <a class="project-link" href="https://amormio25.github.io/etch-a-sketch/" target="_blank" noopener noreferrer>View Demo</a>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="./imgs/pngs/etch-a-sketch.png" alt="etch-a-sketch">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Rock Paper Scissors</h3>
+                        <a class="project-link" href="https://amormio25.github.io/Rock_Paper_Scissors/" target="_blank" noopener noreferrer>View Demo</a>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="./imgs/pngs/rps.png" alt="rock paper scissors">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Flashcards</h3>
+                        <a class="project-link" href="https://amormio25.github.io/web102_flashcards/" target="_blank" noopener noreferrer>View Demo</a>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="./imgs/pngs/flashcards.png" alt="flashcards">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Landing Page</h3>
+                        <a class="project-link" href="https://amormio25.github.io/Landing-Page/" target="_blank" noopener noreferrer>View Demo</a>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="./imgs/pngs/landing-page.png" alt="landing-page">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="updates">
-            <div class="announcements">
-                <h2 class="desc"></h2>
-                <div class="announcements-container">
-                    <div class="announcement-row">
-                        <h4 class="announcements-title"></h4>
-                        <p class="announcement-info"></p>
+                <h2>Announcements</h2>
+                <div class="section">
+                    <div class="announcements-row">
+                        <h4>Sign-Up Form</h4>
+                        <p>This is placeholder text for the project description above.</p>
                     </div>
-                    <div class="announcement-row">
-                        <h4 class="announcements-title"></h4>
-                        <p class="announcement-info"></p>
+                    <div class="announcements-row">
+                        <h4>Calculator</h4>
+                        <p>This is placeholder text for the project description above.</p>
                     </div>
-                    <div class="announcement-row">
-                        <h4 class="announcements-title"></h4>
-                        <p class="announcement-info"></p>
+                    <div class="announcements-row">
+                        <h4>Etch-A-Sketch</h4>
+                        <p>This is placeholder text for the project description above.</p>
                     </div>
                 </div>
-            </div>
-            <div class="trending">
-                <h2 class="desc"></h2>
-                <div class="trending-row">
-                    <div class="pfp small"></div>
-                    <span class="trending-info">
-                        <span class="tag"></span>
-                        <span class="desc"></span>
-                    </span>
+                <h2>Trending</h2>
+                <div class="section">
+                    <div class="trending-row">
+                        <img src="./imgs/pngs/kakashi.png" alt="kakashi">
+                        <div class="info">
+                            <h4>@Kakashi</h4>
+                            <p>Copycat Ninja</p>
+                        </div>
+                    </div>
+                    <div class="trending-row">
+                        <img src="./imgs/pngs/jiraiya.png" alt="jiraiya">
+                        <div class="info">
+                            <h4>@Jiraiya</h4>
+                            <p>Legendary Sannin</p>
+                        </div>
+                    </div>
+                    <div class="trending-row">
+                        <img src="./imgs/pngs/shikamaru.png" alt="shikamaru">
+                        <div class="info">
+                            <h4>@Shikamaru</h4>
+                            <p>Lazy Genius</p>
+                        </div>
+                    </div>
+                    <div class="trending-row">
+                        <img src="./imgs/pngs/choji.png" alt="choji">
+                        <div class="info">
+                            <h4>@Choji</h4>
+                            <p>Mukbang Guy</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="trending-row">
-                    <div class="pfp small"></div>
-                    <span class="trending-info">
-                        <span class="tag"></span>
-                        <span class="desc"></span>
-                    </span>
-                </div>
-                <div class="trending-row">
-                    <div class="pfp small"></div>
-                    <span class="trending-info">
-                        <span class="tag"></span>
-                        <span class="desc"></span>
-                    </span>
-                </div>
-                <div class="trending-row">
-                    <div class="pfp small"></div>
-                    <span class="trending-info">
-                        <span class="tag"></span>
-                        <span class="desc"></span>
-                    </span>
-                </div>
-            </div>
         </div>
     </div>
 </body>
